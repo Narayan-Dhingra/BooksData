@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:cardElevation="8dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_dark_background"
+                android:padding="8dp"
+                android:focusable="true">
+
+
+                <ImageView
+                    android:id="@+id/ivThumbnail"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    tools:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toStartOf="@+id/cl"
+                    app:layout_constraintTop_toTopOf="@+id/cl"/>
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Book Name"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:paddingBottom="2dp"
+                    app:layout_constraintEnd_toEndOf="@+id/cl"
+                    app:layout_constraintHorizontal_bias="0.10"
+                    app:layout_constraintStart_toEndOf="@+id/ivThumbnail"
+                    app:layout_constraintTop_toTopOf="@+id/cl"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSubtitle"
+                    tools:text="Title goes Here"
+                    android:paddingBottom="2dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    app:layout_constraintStart_toStartOf="@id/tvTitle"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:id="@+id/tvAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Author Name"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+                    app:layout_constraintStart_toStartOf="@+id/tvSubtitle"/>
+                <TextView
+                    android:id="@+id/tvUrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="http://Url.goes.here.com"
+                    android:paddingEnd="4dp"
+                    tools:textColor="@android:color/holo_blue_bright"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAuthor"
+                    app:layout_constraintStart_toStartOf="@id/tvAuthor"
+                    tools:ignore="RtlSymmetry" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
